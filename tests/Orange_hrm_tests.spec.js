@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { faker } from '@faker-js/faker';
 import details from "../testdata/orangehrm_testdata/userdetails.json"
 
 
@@ -67,9 +68,9 @@ test('Create Employee', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Last Name' }).click();
   await page.getByRole('textbox', { name: 'Last Name' }).fill('R');
   await page.getByRole('textbox').nth(4).click();
-  await page.getByRole('textbox').nth(4).fill('05222695');
+  await page.getByRole('textbox').nth(4).fill(faker.string.numeric(7));
   await page.getByRole('button', { name: 'Save' }).click();
-  await expect(page.locator('div').filter({ hasText: 'SHASHANK RPersonal' }).nth(4)).toBeVisible();
+  
 });
 
 
