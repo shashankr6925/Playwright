@@ -1,0 +1,37 @@
+{
+  "login": {
+    "valid": {
+      "username": "Admin",
+      "password": "admin123"
+    },
+    "invalidPassword": {
+      "password": "Admin123456"
+    },
+    "invalidUsername": {
+      "username": "Admiiin"
+    }
+  },
+
+  "employee": {
+    "firstName": "SHASHANK",
+    "lastName": "R",
+    "employeeId": "05222695"
+  },
+
+  "buzz": {
+    "post": "Hi Hello"
+  },
+
+  "myInfo": {
+    "firstName": "ALEX"
+  },
+
+  "search": {
+    "employeeName": "SHASHANK",
+    "employeeIds": [
+      "0522695",
+      "05226925"
+    ],
+    "employeeId": "0522666925"
+  }
+}
