@@ -33,6 +33,7 @@ test('login with problem_user username', async ({ page }) => {
 });
 
 test('login with performance_glitch_user username', async ({ page }) => {
+  test.setTimeout(60000);
   await page.goto('https://www.saucedemo.com/');
   await page.locator('[data-test="username"]').click();
   await page.locator('[data-test="username"]').fill(details.login.users.performanceGlitch);
@@ -51,7 +52,7 @@ test('login with error_user username', async ({ page }) => {
   await page.locator('[data-test="password"]').fill(details.login.password);
   await page.locator('[data-test="login-button"]').click();
   await expect(page.locator('[data-test="secondary-header"]')).toBeVisible();
-  await expect(page.locator('[data-test="inventory-container"]')).toBeVisible({ timeout: 10000 });
+  await expect(page.locator('[data-test="inventory-container"]')).toBeVisible();
 });
 
 test('login with visual_user username', async ({ page }) => {

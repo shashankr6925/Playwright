@@ -37,6 +37,7 @@ test('login with problem_user username', async ({ page }) => {
 
 
 test('login with performance_glitch_user username', async ({ page }) => {
+  test.setTimeout(60000);
   await page.goto('https://www.saucedemo.com/');
   await page.locator('[data-test="username"]').click();
   await page.locator('[data-test="username"]').fill('performance_glitch_user');
