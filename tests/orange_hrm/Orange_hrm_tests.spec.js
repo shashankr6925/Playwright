@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
-import details from "../testdata/orangehrm_testdata/userdetails.json"
+import details from "../../testdata/orangehrm_testdata/userdetails.json"
 
 
 test('Login with valid details', async ({ page }) => {
